@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+            width: calc(100vw - 200px);
+            height: calc(100vh - 0px);
+            padding: 50px 100px; 
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: lightgray;
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+
+        .container-small {
+            height: 100%;
+            width: 100%;
+        }
+
+        .container-large {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container container-small"></div>
+    <div class="container container-small"></div>
+    <div class="container container-large"></div>
+</body>
+</html>
